@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=BST
+comment0.text=\r\n\ Your\ implementation\ of\ a\ BST.\r\n
+comment1.params=data
+comment1.target=void\ add(java.lang.Comparable)
+comment1.text=\r\n\ Adds\ the\ data\ to\ the\ tree.\r\n\r\n\ This\ must\ be\ done\ recursively.\r\n\r\n\ The\ new\ data\ should\ become\ a\ leaf\ in\ the\ tree.\r\n\r\n\ Traverse\ the\ tree\ to\ find\ the\ appropriate\ location.\ If\ the\ data\ is\r\n\ already\ in\ the\ tree,\ then\ nothing\ should\ be\ done\ (the\ duplicate\r\n\ shouldn't\ get\ added,\ and\ size\ should\ not\ be\ incremented).\r\n\r\n\ Should\ be\ O(log\ n)\ for\ best\ and\ average\ cases\ and\ O(n)\ for\ worst\ case.\r\n\r\n\ @param\ data\ The\ data\ to\ add\ to\ the\ tree.\r\n\ @throws\ java.lang.IllegalArgumentException\ If\ data\ is\ null.\r\n
+comment2.params=cur\ data
+comment2.target=BSTNode\ helperAdd(BSTNode,\ java.lang.Comparable)
+comment3.params=data
+comment3.target=java.lang.Comparable\ remove(java.lang.Comparable)
+comment3.text=\r\n\ Removes\ and\ returns\ the\ data\ from\ the\ tree\ matching\ the\ given\ parameter.\r\n\r\n\ This\ must\ be\ done\ recursively.\r\n\r\n\ There\ are\ 3\ cases\ to\ consider\:\r\n\ 1\:\ The\ node\ containing\ the\ data\ is\ a\ leaf\ (no\ children).\ In\ this\ case,\r\n\ simply\ remove\ it.\r\n\ 2\:\ The\ node\ containing\ the\ data\ has\ one\ child.\ In\ this\ case,\ simply\r\n\ replace\ it\ with\ its\ child.\r\n\ 3\:\ The\ node\ containing\ the\ data\ has\ 2\ children.\ Use\ the\ SUCCESSOR\ to\r\n\ replace\ the\ data.\ You\ should\ use\ recursion\ to\ find\ and\ remove\ the\r\n\ successor\ (you\ will\ likely\ need\ an\ additional\ helper\ method\ to\r\n\ handle\ this\ case\ efficiently).\r\n\r\n\ Do\ NOT\ return\ the\ same\ data\ that\ was\ passed\ in.\ Return\ the\ data\ that\r\n\ was\ stored\ in\ the\ tree.\r\n\r\n\ Hint\:\ Should\ you\ use\ value\ equality\ or\ reference\ equality?\r\n\r\n\ Must\ be\ O(log\ n)\ for\ best\ and\ average\ cases\ and\ O(n)\ for\ worst\ case.\r\n\r\n\ @param\ data\ The\ data\ to\ remove.\r\n\ @return\ The\ data\ that\ was\ removed.\r\n\ @throws\ java.lang.IllegalArgumentException\ If\ data\ is\ null.\r\n\ @throws\ java.util.NoSuchElementException\ \ \ If\ the\ data\ is\ not\ in\ the\ tree.\r\n
+comment4.params=cur\ data\ dummy
+comment4.target=BSTNode\ find(BSTNode,\ java.lang.Comparable,\ BSTNode)
+comment5.params=cur\ temp
+comment5.target=BSTNode\ successor(BSTNode,\ BSTNode)
+comment6.params=
+comment6.target=BSTNode\ getRoot()
+comment6.text=\r\n\ Returns\ the\ root\ of\ the\ tree.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ root\ of\ the\ tree\r\n
+comment7.params=
+comment7.target=int\ size()
+comment7.text=\r\n\ Returns\ the\ size\ of\ the\ tree.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ size\ of\ the\ tree\r\n
+numComments=8

@@ -1,3 +1,5 @@
+
+
 import java.util.NoSuchElementException;
 
 /**
@@ -63,8 +65,8 @@ public class ArrayList<T> {
         if (backingArray.length == size) {
             T[] tempArr = (T[]) new Object[backingArray.length * 2];
             tempArr[0] = data;
-            for (int i = 1; i < size; i++) {
-                tempArr[i] = backingArray[i];
+            for (int i = 1; i <= size; i++) {
+                tempArr[i] = backingArray[i-1];
             }
             size++;
             backingArray = tempArr;
@@ -96,7 +98,70 @@ public class ArrayList<T> {
         backingArray[index] = data;
         size++;
     }
-
+    /**
+     * Adds the element to the specified index.
+     *
+     * Remember that this add may require elements to be shifted.
+     *
+     * Must be amortized O(1) for index size and O(n) for all other cases.
+     *
+     * @param index the index at which to add the new element
+     * @param data  the data to add at the specified index
+     * @throws java.lang.IndexOutOfBoundsException if index < 0 or index > size
+     * @throws java.lang.IllegalArgumentException  if data is null
+     */
+    private  void  addAtIndex ( int  index , T  data ) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (data == null) {
+            throw new IllegalArgumentException();
+        }
+        if (backingArray.length == size) {
+            T[] tempArr = (T[]) new Object[backingArray.length * 2];
+            for (int i = 0; i < index; i++) {
+                tempArr[i] = backingArray[i];
+            }
+            tempArr[index] = data;
+            for (int j = index + 1; j < size; j++) {
+                tempArr[j] = backingArray[j];
+            }
+            size++;
+            backingArray = tempArr;
+        } else {
+            addShift(index, data);
+        }
+    }
+    // this method is for the Practice Exam, not for module1 test.
+    
+        public void addAtIndex(int index, T data) {
+        // WRITE YOUR CODE HERE (DO NOT MODIFY METHOD HEADER)!
+        if (index == 0) {
+            T[] tempArr = (T[]) new Object[backingArray.length];
+            tempArr[0] = data;
+            for (int i = index + 1; i <= size; i++){
+                 tempArr[i] = backingArray[i - 1];
+             }
+            backingArray = tempArr;
+            size++;
+            } 
+        else if ( size > index ) {
+             T[] tempArr = (T[]) new Object[backingArray.length];
+             for ( int i = 0; i < index; i++){
+                 tempArr[i] = backingArray[i];
+                 tempArr[index] = data;                             
+             }
+             for (int i = index + 1; i <= size; i++){
+                 tempArr[i] = backingArray[i - 1];
+             }
+             size++;
+             backingArray = tempArr;
+         } else {
+             backingArray[index] = data;
+             size++;
+         }
+              
+    }
     /**
      * Removes and returns the first data of the list.
      *
@@ -175,4 +240,13 @@ public class ArrayList<T> {
         // DO NOT MODIFY THIS METHOD!
         return size;
     }
+}
+/**
+ * Write a description of ArrayList here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ArrayList {
+
 }

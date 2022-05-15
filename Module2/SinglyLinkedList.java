@@ -127,6 +127,44 @@ public class SinglyLinkedList<T> {
         size--;
         return temp;
     }
+    //add at index, not part of the module2 test, but for Practice Exam.
+     public void addAtIndex(int index, T data) {
+        if (tail == null) {
+           SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data); 
+           head = newNode;
+           tail = newNode;
+           size++;
+           return;
+        }
+        if (index == 0){
+
+            SinglyLinkedListNode<T> newHead = new SinglyLinkedListNode<>(data);
+            newHead.setNext(head);
+            head = newHead;
+            size++;
+        } else {
+            SinglyLinkedListNode<T> newNode = new SinglyLinkedListNode<>(data);
+            SinglyLinkedListNode<T> current = head;
+            SinglyLinkedListNode<T> preTargetNode = null;
+            for (int i = 0; i < index; i++) {
+                preTargetNode = current;
+                current = current.getNext();
+            }
+
+            if (preTargetNode == tail) {
+                preTargetNode.setNext(newNode);
+                tail = newNode;
+
+            }else{
+                newNode.setNext(current);
+                preTargetNode.setNext(newNode);
+            }
+
+            size++;
+        }
+        
+        
+    }
 
     /**
      * Returns the head node of the list.

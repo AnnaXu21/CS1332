@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=TreeNode
+comment0.text=\r\n\ Node\ class\ used\ for\ implementing\ the\ BST.\r\n\r\n\ DO\ NOT\ MODIFY\ THIS\ FILE\!\!\r\n\r\n\ @author\ CS\ 1332\ TAs\r\n\ @version\ 1.0\r\n
+comment1.params=data
+comment1.target=TreeNode(java.lang.Comparable)
+comment1.text=\r\n\ Constructs\ a\ TreeNode\ with\ the\ given\ data.\r\n\r\n\ @param\ data\ the\ data\ stored\ in\ the\ new\ node\r\n
+comment2.params=
+comment2.target=java.lang.Comparable\ getData()
+comment2.text=\r\n\ Gets\ the\ data.\r\n\r\n\ @return\ the\ data\r\n
+comment3.params=
+comment3.target=TreeNode\ getLeft()
+comment3.text=\r\n\ Gets\ the\ left\ child.\r\n\r\n\ @return\ the\ left\ child\r\n
+comment4.params=
+comment4.target=TreeNode\ getRight()
+comment4.text=\r\n\ Gets\ the\ right\ child.\r\n\r\n\ @return\ the\ right\ child\r\n
+comment5.params=data
+comment5.target=void\ setData(java.lang.Comparable)
+comment5.text=\r\n\ Sets\ the\ data.\r\n\r\n\ @param\ data\ the\ new\ data\r\n
+comment6.params=left
+comment6.target=void\ setLeft(TreeNode)
+comment6.text=\r\n\ Sets\ the\ left\ child.\r\n\r\n\ @param\ left\ the\ new\ left\ child\r\n
+comment7.params=right
+comment7.target=void\ setRight(TreeNode)
+comment7.text=\r\n\ Sets\ the\ right\ child.\r\n\r\n\ @param\ right\ the\ new\ right\ child\r\n
+numComments=8

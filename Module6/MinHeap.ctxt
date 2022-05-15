@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=MinHeap
+comment0.text=\r\n\ Your\ implementation\ of\ a\ MinHeap.\r\n
+comment1.params=
+comment1.target=MinHeap()
+comment1.text=\r\n\ This\ is\ the\ constructor\ that\ constructs\ a\ new\ MinHeap.\r\n\r\n\ Recall\ that\ Java\ does\ not\ allow\ for\ regular\ generic\ array\ creation,\r\n\ so\ instead\ we\ cast\ a\ Comparable[]\ to\ a\ T[]\ to\ get\ the\ generic\ typing.\r\n
+comment2.params=data
+comment2.target=void\ add(java.lang.Comparable)
+comment2.text=\r\n\ Adds\ an\ item\ to\ the\ heap.\ If\ the\ backing\ array\ is\ full\ (except\ for\r\n\ index\ 0)\ and\ you're\ trying\ to\ add\ a\ new\ item,\ then\ double\ its\ capacity.\r\n\r\n\ Method\ should\ run\ in\ amortized\ O(log\ n)\ time.\r\n\r\n\ @param\ data\ The\ data\ to\ add.\r\n\ @throws\ java.lang.IllegalArgumentException\ If\ the\ data\ is\ null.\r\n
+comment3.params=
+comment3.target=void\ doubleSize()
+comment4.params=
+comment4.target=void\ heapifyUp()
+comment5.params=a\ b
+comment5.target=void\ swap(int,\ int)
+comment6.params=
+comment6.target=java.lang.Comparable\ remove()
+comment6.text=\r\n\ Removes\ and\ returns\ the\ min\ item\ of\ the\ heap.\ As\ usual\ for\ array-backed\r\n\ structures,\ be\ sure\ to\ null\ out\ spots\ as\ you\ remove.\ Do\ not\ decrease\ the\r\n\ capacity\ of\ the\ backing\ array.\r\n\r\n\ Method\ should\ run\ in\ O(log\ n)\ time.\r\n\r\n\ @return\ The\ data\ that\ was\ removed.\r\n\ @throws\ java.util.NoSuchElementException\ If\ the\ heap\ is\ empty.\r\n
+comment7.params=
+comment7.target=void\ heapifyDown()
+comment8.params=
+comment8.target=java.lang.Comparable[]\ getBackingArray()
+comment8.text=\r\n\ Returns\ the\ backing\ array\ of\ the\ heap.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ backing\ array\ of\ the\ list\r\n
+comment9.params=
+comment9.target=int\ size()
+comment9.text=\r\n\ Returns\ the\ size\ of\ the\ heap.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ size\ of\ the\ list\r\n
+numComments=10

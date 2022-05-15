@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Traversals
+comment0.text=\r\n\ Your\ implementation\ of\ the\ pre-order,\ in-order,\ and\ post-order\r\n\ traversals\ of\ a\ tree.\r\n
+comment1.params=root
+comment1.target=java.util.List\ preorder(TreeNode)
+comment1.text=\r\n\ Given\ the\ root\ of\ a\ binary\ search\ tree,\ generate\ a\r\n\ pre-order\ traversal\ of\ the\ tree.\ The\ original\ tree\r\n\ should\ not\ be\ modified\ in\ any\ way.\r\n\r\n\ This\ must\ be\ done\ recursively.\r\n\r\n\ Must\ be\ O(n).\r\n\r\n\ @param\ <T>\ Generic\ type.\r\n\ @param\ root\ The\ root\ of\ a\ BST.\r\n\ @return\ List\ containing\ the\ pre-order\ traversal\ of\ the\ tree.\r\n
+comment2.params=cur\ lst
+comment2.target=void\ helperPre(TreeNode,\ java.util.List)
+comment3.params=root
+comment3.target=java.util.List\ inorder(TreeNode)
+comment3.text=\r\n\ Given\ the\ root\ of\ a\ binary\ search\ tree,\ generate\ an\r\n\ in-order\ traversal\ of\ the\ tree.\ The\ original\ tree\r\n\ should\ not\ be\ modified\ in\ any\ way.\r\n\r\n\ This\ must\ be\ done\ recursively.\r\n\r\n\ Must\ be\ O(n).\r\n\r\n\ @param\ <T>\ Generic\ type.\r\n\ @param\ root\ The\ root\ of\ a\ BST.\r\n\ @return\ List\ containing\ the\ in-order\ traversal\ of\ the\ tree.\r\n
+comment4.params=cur\ lst
+comment4.target=void\ helperIn(TreeNode,\ java.util.List)
+comment5.params=root
+comment5.target=java.util.List\ postorder(TreeNode)
+comment5.text=\r\n\ Given\ the\ root\ of\ a\ binary\ search\ tree,\ generate\ a\r\n\ post-order\ traversal\ of\ the\ tree.\ The\ original\ tree\r\n\ should\ not\ be\ modified\ in\ any\ way.\r\n\r\n\ This\ must\ be\ done\ recursively.\r\n\r\n\ Must\ be\ O(n).\r\n\r\n\ @param\ <T>\ Generic\ type.\r\n\ @param\ root\ The\ root\ of\ a\ BST.\r\n\ @return\ List\ containing\ the\ post-order\ traversal\ of\ the\ tree.\r\n
+comment6.params=cur\ lst
+comment6.target=void\ helperPo(TreeNode,\ java.util.List)
+numComments=7
