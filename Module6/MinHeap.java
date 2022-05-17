@@ -17,7 +17,31 @@ public class MinHeap<T extends Comparable<? super T>> {
      */
     private T[] backingArray;
     private int size;
-
+    
+    /*
+     * test scetion
+     */
+    public static void main(String[] args) {
+        MinHeap heap = new MinHeap();
+        heap.add(0);
+        heap.add(7);
+        heap.add(14);
+        heap.add(21);
+        heap.add(28);
+        heap.add(35);
+        heap.add(42);
+        heap.add(49);
+        heap.add(56);
+        heap.remove();
+        heap.printHeap();
+        
+    }
+     private void printHeap() {
+        for (int i = 0; i < size+1; i++) {
+            System.out.print(backingArray[i] + ", ");
+        }
+        System.out.println();
+    }
     /**
      * This is the constructor that constructs a new MinHeap.
      *
@@ -91,14 +115,15 @@ public class MinHeap<T extends Comparable<? super T>> {
         T returned = backingArray[1];
         backingArray[1] = backingArray[size];
         backingArray[size] = null;
-        heapifyDown();
         size--;
+        heapifyDown();
+        
         return returned;
     }
     private void heapifyDown(){
 
         int index = 1;
-        int smallerIndex = index*2; 
+        int smallerIndex = index*2; // index*2 is the index of left child 
         
         // has left child
         while (backingArray[index * 2] != null){
@@ -109,9 +134,11 @@ public class MinHeap<T extends Comparable<? super T>> {
                     smallerIndex = index*2; 
                 }else{ smallerIndex = index*2+1; }
             }
+            
             if (backingArray[index].compareTo(backingArray[smallerIndex]) > 0){
                 swap(index, smallerIndex);
             } else { break;}
+
             index = smallerIndex;
         }
     }
