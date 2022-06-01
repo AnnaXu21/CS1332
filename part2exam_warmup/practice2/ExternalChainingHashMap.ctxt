@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=ExternalChainingHashMap
+comment0.text=\r\n\ Your\ implementation\ of\ a\ ExternalChainingHashMap.\r\n
+comment1.params=
+comment1.target=ExternalChainingHashMap()
+comment1.text=\r\n\ Constructs\ a\ new\ ExternalChainingHashMap\ with\ an\ initial\ capacity\ of\ INITIAL_CAPACITY.\r\n
+comment2.params=key
+comment2.target=java.lang.Object\ get(java.lang.Object)
+comment2.text=\r\n\ Gets\ the\ value\ associated\ with\ the\ given\ key.\r\n\r\n\ @param\ key\ The\ key\ to\ search\ for\ in\ the\ map.\ You\ may\ assume\ that\ the\r\n\ \ \ \ \ \ \ \ \ \ \ \ key\ is\ never\ null.\r\n\ @return\ The\ value\ associated\ with\ the\ given\ key.\r\n\ @throws\ java.util.NoSuchElementException\ If\ the\ key\ is\ not\ in\ the\ map.\r\n
+comment3.params=key
+comment3.target=boolean\ containsKey(java.lang.Object)
+comment3.text=\r\n\ Returns\ whether\ or\ not\ the\ key\ is\ in\ the\ map.\r\n\r\n\ @param\ key\ The\ key\ to\ search\ for\ in\ the\ map.\ You\ may\ assume\ that\ the\r\n\ \ \ \ \ \ \ \ \ \ \ \ key\ is\ never\ null.\r\n\ @return\ true\ if\ the\ key\ is\ contained\ within\ the\ map,\ false\ otherwise.\r\n
+comment4.params=key
+comment4.target=int\ getIndexAtKey(java.lang.Object)
+comment4.text=\r\n\ Gets\ the\ index\ at\ key.\r\n\ @param\ key\ The\ key.\r\n\ @return\ The\ index\ at\ the\ key.\r\n
+comment5.params=
+comment5.target=ExternalChainingMapEntry[]\ getTable()
+comment5.text=\r\n\ Returns\ the\ table\ of\ the\ map.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ table\ of\ the\ map.\r\n
+comment6.params=
+comment6.target=int\ size()
+comment6.text=\r\n\ Returns\ the\ size\ of\ the\ map.\r\n\r\n\ For\ grading\ purposes\ only.\ You\ shouldn't\ need\ to\ use\ this\ method\ since\r\n\ you\ have\ direct\ access\ to\ the\ variable.\r\n\r\n\ @return\ The\ size\ of\ the\ map.\r\n
+numComments=7

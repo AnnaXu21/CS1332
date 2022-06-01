@@ -123,24 +123,99 @@ public class MinHeap<T extends Comparable<? super T>> {
     private void heapifyDown(){
 
         int index = 1;
-        int smallerIndex = index*2; // index*2 is the index of left child 
+        T parent = backingArray[index];
+        T leftChild = getLeftChild(index);
+        T rightChild = getRightChild(index);
         
-        // has left child
-        while (backingArray[index * 2] != null){
-            // has right child
-            if (backingArray[index * 2 +1] != null) {
-                int compare = backingArray[index * 2].compareTo(backingArray[index * 2 +1]);
-                if (compare < 0){
-                    smallerIndex = index*2; 
-                }else{ smallerIndex = index*2+1; }
-            }
-            
-            if (backingArray[index].compareTo(backingArray[smallerIndex]) > 0){
-                swap(index, smallerIndex);
-            } else { break;}
-
-            index = smallerIndex;
+        // Determine number of children
+        int numChildren = 0;
+        if (leftChild != null && rightChild == null) {
+            numChildren = 1;
         }
+        else if (leftChild != null && rightChild != null) {
+            numChildren = 2;
+        }
+        
+        while (numChildren != 0){    
+
+            int comparison = 0;
+            int smallestIndex = 0;
+            if (numChildren == 1) {
+                comparison = parent.compareTo(leftChild);
+                smallestIndex = 2 * index;
+            }
+            else if (numChildren == 2) {
+                // Determine higher priority child.
+                // Start by assuming it's the left child.
+                int priorityIndex = 2 * index;
+                // If left is larger than right, change assignment to right.
+                if (leftChild.compareTo(rightChild) > 0) {
+                    priorityIndex = 2 * index + 1;
+                }
+                T smallestChild = backingArray[priorityIndex];
+                comparison = parent.compareTo(smallestChild);
+                smallestIndex = priorityIndex;
+            }
+            // swap parent and child
+            if (comparison > 0) {
+                swap(index, smallestIndex);
+            }
+            index = smallestIndex;
+            leftChild = getLeftChild(index);
+            rightChild = getRightChild(index);
+            if (leftChild != null && rightChild == null) {
+                numChildren = 1;
+            }
+            else if (leftChild != null && rightChild != null) {
+                numChildren = 2;
+            } else{ numChildren =  0; }           
+        }
+        return;
+    }
+        
+        // // has left child
+        // while (backingArray[index * 2] != null){
+            // // has right child
+            // if (backingArray[index * 2 +1] != null) {
+                // int compare = backingArray[index * 2].compareTo(backingArray[index * 2 +1]);
+                // if (compare < 0){
+                    // smallerIndex = index*2; 
+                // }else{ smallerIndex = index*2+1; }
+            // }
+            // // no right child
+            // else if (backingArray[index * 2 +1] == null) {
+                // smallerIndex = smallerIndex;
+            // }
+            
+            // if (backingArray[index].compareTo(backingArray[smallerIndex]) > 0){
+                // swap(index, smallerIndex);
+            // } else { break;}
+
+            // index = smallerIndex;
+        // }
+    
+    /**
+     * Gets the left child of a node at an index.
+     * @param index The index of the node.
+     * @return The data in the left child node.
+     */
+    private T getLeftChild(int index) {
+        if (2 * index > size) {
+            return null;
+        }
+        return backingArray[2 * index];
+    }
+
+    /**
+     * Gets the right child of a node at an index.
+     * @param index The index of the node.
+     * @return The data in the right child node.
+     */
+    private T getRightChild(int index) {
+        if (2 * index + 1 > size) {
+            return null;
+        }
+        return backingArray[2 * index + 1];
     }
 
     /**
